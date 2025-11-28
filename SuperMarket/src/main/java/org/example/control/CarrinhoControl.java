@@ -42,8 +42,9 @@ public class CarrinhoControl {
 
     public double valorCarrinho () {
         double valorCarrinho = 0;
-        for(int i = 0; i <= this.carrinho.getListaCompras().size(); i++){
-            valorCarrinho += this.carrinho.getListaCompras().get(i).getValorProduto();
+
+        for(Compra produto : carrinho.getListaCompras()){
+            valorCarrinho += produto.getValorProduto();
         }
 
         return valorCarrinho;

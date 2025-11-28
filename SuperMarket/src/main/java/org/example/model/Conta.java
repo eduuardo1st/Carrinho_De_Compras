@@ -3,6 +3,8 @@ package org.example.model;
 public class Conta {
     private double saldo;
 
+    public Conta() {}
+
     public Conta(double saldo) {
         this.saldo = saldo;
     }
