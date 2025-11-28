@@ -24,4 +24,10 @@ public class Compra {
     public void setValorProduto(double valorProduto) {
         this.valorProduto = valorProduto;
     }
+
+    @Override
+    public String toString() {
+        return "Produto: " + nomeProduto +
+                " - R$ " + valorProduto;
+    }
 }

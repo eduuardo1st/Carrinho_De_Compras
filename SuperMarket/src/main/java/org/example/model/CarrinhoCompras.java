@@ -18,8 +18,19 @@ public class CarrinhoCompras {
     }
 
     public void adicionarProdutoListaCompras (Compra novoProduto) {
-        Compra produto = new Compra(novoProduto.getNomeProduto(), novoProduto.getValorProduto());
+        this.listaCompras.add(novoProduto);
+    }
 
-        this.listaCompras.add(produto);
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < listaCompras.size(); i++) {
+            sb.append(i);
+            sb.append(" - ");
+            sb.append(listaCompras.get(i).toString());
+            sb.append("\n");
+        }
+
+        return sb.toString();
     }
 }
